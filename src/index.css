@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "BrushScript";
+    src: url("./assets/fonts/BrushScriptStd.otf");
+}
+
+html {
+  overflow-x: hidden
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media only screen and (min-width: 640px) {
+  body {
+    overflow-x: visible;
+  }
+}
+
+.nav-text {
+    color: #bb6d77;
+}
+.nav-text:hover {
+    color: #af626c;
+}
+.nav-text:active {
+    color: #fcaebb;
+}
+
+.text-primary {
+  color: #bb6d77;
+}
+.text-header {
+  color: #fcaebb;
+}
+.text-dim {
+  color: #ffffff
+}
+
+.background-primary {
+  background-color: #fcaebb;
+}
+.background-secondary {
+  background-color: #ffe3f1;
+}
+
+.button-primary {
+  color: white;
+  background-color: #fcaebb;
+  outline-style: solid;
+  outline-color: #fcaebb;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition-duration: 150ms;
+}
+.button-primary:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #bb6d77;
+}
+
+.button-dim {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  outline-style: solid;
+  outline-color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  transition-duration: 150ms;
+}
+.button-dim:hover {
+  background-color: white;
+  color: #bb6d77;
+}
