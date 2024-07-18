@@ -105,7 +105,7 @@ const Services = ({ ref }: Props) => {
         parallaxWeight={smBack}
       />
       <Plant 
-        className="h-[190px] absolute right-0 sm:bottom-[30vh] bottom-[60vh]"
+        className="sm:block hidden h-[190px] absolute right-0 sm:bottom-[30vh] bottom-[60vh]"
         plantType={PlantType.HIGH_HANG} 
         leftSide={false}
         stemStroke="white"
@@ -114,7 +114,7 @@ const Services = ({ ref }: Props) => {
         parallaxWeight={mdBack}
       />
       <Plant 
-        className="h-[290px] absolute right-0 sm:bottom-[55vh] bottom-[100vh]"
+        className="sm:block hidden h-[290px] absolute right-0 sm:bottom-[55vh] bottom-[100vh]"
         plantType={PlantType.MEDIUM_HANG} 
         leftSide={false}
         stemStroke="white"
@@ -123,7 +123,7 @@ const Services = ({ ref }: Props) => {
         parallaxWeight={lgBack}
       />
       <Plant 
-        className="h-[220px] absolute right-0 sm:top-[5vh] top-[40vh]"
+        className="sm:block hidden h-[220px] absolute right-0 sm:top-[5vh] top-[40vh]"
         plantType={PlantType.LOW_HANG} 
         leftSide={false}
         stemStroke="white"
@@ -142,7 +142,7 @@ const Services = ({ ref }: Props) => {
         parallaxWeight={smBack}
       />
       <Plant 
-        className="h-[220px] absolute -left-2 sm:top-[8vh] top-[20vh]"
+        className="sm:block hidden h-[220px] absolute -left-2 sm:top-[8vh] top-[20vh]"
         plantType={PlantType.HIGH_HANG} 
         leftSide={true}
         stemStroke="white"
@@ -151,7 +151,7 @@ const Services = ({ ref }: Props) => {
         parallaxWeight={mdBack}
       />
       <Plant 
-        className="h-[210px] absolute -left-2 sm:bottom-[30vh] bottom-[80vh]"
+        className="sm:block hidden h-[210px] absolute -left-2 sm:bottom-[30vh] bottom-[80vh]"
         plantType={PlantType.HIGH_HANG} 
         leftSide={true}
         stemStroke="white"
@@ -169,7 +169,7 @@ const Services = ({ ref }: Props) => {
         parallaxWeight={smBack}
       />
       <Plant 
-        className="h-[310px] absolute -left-2 sm:bottom-[50vh] bottom-[150vh]"
+        className="sm:block hidden h-[310px] absolute -left-2 sm:bottom-[50vh] bottom-[150vh]"
         plantType={PlantType.LOW_HANG} 
         leftSide={true}
         stemStroke="white"
