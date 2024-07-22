@@ -14,8 +14,8 @@ const Hero = ({ ref }: Props) => {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const sm = useParallax(scrollYProgress, -100, 250);
-  const md = useParallax(scrollYProgress, -200, 550);
+  const sm = useParallax(scrollYProgress, -100, 200);
+  const md = useParallax(scrollYProgress, -400, 1000);
 
   return (
     <div className="md:flex-row flex-col flex h-[100vh]">
@@ -70,23 +70,27 @@ const Hero = ({ ref }: Props) => {
         </motion.button>
 
         <Plant 
-          className="h-[280px] md:block hidden absolute left-0 -bottom-24"
+          className="h-[410px] md:block hidden absolute left-0 -bottom-24"
+          width={400}
+          height={400}
           plantType={PlantType.LOW_HANG} 
           leftSide={true}
           stemStroke="#fcaebb"
           leafStroke="#fcaebb"
           leafFill="#fcaebb"
-          parallaxWeight={md}
+          parallaxWeight={sm}
           animateDelay={.2}
         />
         <Plant 
-          className="z-0 md:h-[400px] sm:h-[300px] h-[200px] lg:block md:hidden block absolute right-0 -bottom-36"
+          className="z-0 h-[210px] lg:block md:hidden block absolute right-0 sm:-bottom-24"
+          width={200}
+          height={200}
           plantType={PlantType.LOW_HANG} 
           leftSide={false}
           stemStroke="#fcaebb"
           leafStroke="#fcaebb"
           leafFill="#fcaebb"
-          parallaxWeight={sm}
+          parallaxWeight={md}
           animateDelay={1}
         />
       </motion.div>

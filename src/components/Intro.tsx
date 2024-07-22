@@ -14,7 +14,6 @@ const Intro = ({ ref }: Props) => {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const sm = useParallax(scrollYProgress, 200, -400);
   const lg = useParallax(scrollYProgress, 400, -400);
 
   return (
@@ -24,12 +23,11 @@ const Intro = ({ ref }: Props) => {
           src={intro}
           alt="About Us"
           className="max-h-[50vh] shadow-2xl"
-          style={{ y: sm }}
           initial="hidden"
           whileInView="visible"
           variants={fadeIn}
           viewport={{ once: true }}
-          custom={.5}
+          custom={1.6}
         />
       </div>
 
@@ -75,7 +73,9 @@ const Intro = ({ ref }: Props) => {
       </div>
 
       <Plant
-        className="sm:block hidden 2xl:h-[450px] xl:h-[300px] md:h-[200px] sm:h-[150px] absolute right-0 bottom-14 drop-shadow-md"
+        className="sm:block hidden xl:h-[300px] md:h-[200px] sm:h-[150px] absolute right-0 bottom-20 drop-shadow-md"
+        width={150}
+        height={150}
         plantType={PlantType.MEDIUM_HANG}
         parallaxWeight={lg}
         leftSide={false}

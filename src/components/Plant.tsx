@@ -9,6 +9,8 @@ export enum PlantType {
 }
 
 type Props = {
+  width: number,
+  height: number,
   plantType: PlantType,
   leftSide: boolean,
   parallaxWeight?: MotionValue
@@ -19,7 +21,7 @@ type Props = {
   className?: string
 }
 
-const Plant = ({plantType, leftSide, parallaxWeight, stemStroke, leafStroke, leafFill, animateDelay, className} : Props) => {
+const Plant = ({ width, height, plantType, leftSide, parallaxWeight, stemStroke, leafStroke, leafFill, animateDelay, className } : Props) => {
   var stemSVG = "";
   var leafSVG = "";
 
@@ -57,6 +59,8 @@ const Plant = ({plantType, leftSide, parallaxWeight, stemStroke, leafStroke, lea
 
   return (
     <motion.svg
+      width={width}
+      height={height}
       style={{ y: parallaxWeight }}
       viewBox={leftSide? "0 0 40 40" : "0 0 20 40" }
       className={className}
