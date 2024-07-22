@@ -14,9 +14,9 @@ const Services = ({ ref }: Props) => {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const smBack = useParallax(scrollYProgress, -650, 650);
-  const mdBack = useParallax(scrollYProgress, -400, 400);
-  const lgBack = useParallax(scrollYProgress, -200, 200);
+  const smBack = useParallax(scrollYProgress, -600, 1400);
+  const mdBack = useParallax(scrollYProgress, -100, 1200);
+  const lgBack = useParallax(scrollYProgress, 1000, 1500);
 
   return (
     <div className="relative sm:px-[18vw] py-[6vh] px-[6vw] background-primary text-dim">
@@ -24,9 +24,9 @@ const Services = ({ ref }: Props) => {
         OUR SERVICES
       </h2>
 
-      <ul className="relative z-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-[5vh] sm:mx-0 mx-8 text-center">
+      <ul className="relative z-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-[5vh] sm:mx-0 mx-8 text-center justify-items-center">
         {services.map((service) => (
-          <li key={service.id} className="mx-5 flex flex-col justify-between">
+          <li key={service.id} className="mx-5 flex flex-col justify-between max-w-[360px]">
             <div>
               <motion.svg 
                 className="drop-shadow-md"
@@ -86,97 +86,106 @@ const Services = ({ ref }: Props) => {
         ))}
       </ul>
 
-      <Plant 
-        className="sm:block hidden h-[140px] absolute right-0 sm:top-[30vh] top-[90vh]"
-        plantType={PlantType.HIGH_HANG} 
-        leftSide={false}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={smBack}
-      />
-      <Plant 
-        className="sm:block hidden h-[160px] absolute right-0 sm:bottom-[17vh] bottom-[40vh]"
-        plantType={PlantType.LOW_HANG} 
-        leftSide={false}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={smBack}
-      />
-      <Plant 
-        className="sm:block hidden h-[190px] absolute right-0 sm:bottom-[30vh] bottom-[60vh]"
-        plantType={PlantType.HIGH_HANG} 
-        leftSide={false}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={mdBack}
-      />
-      <Plant 
-        className="sm:block hidden h-[290px] absolute right-0 sm:bottom-[55vh] bottom-[100vh]"
-        plantType={PlantType.MEDIUM_HANG} 
-        leftSide={false}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={lgBack}
-      />
-      <Plant 
-        className="sm:block hidden h-[220px] absolute right-0 sm:top-[5vh] top-[40vh]"
-        plantType={PlantType.LOW_HANG} 
-        leftSide={false}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={mdBack}
-      />
+      <motion.div 
+        key="small-plants" 
+        className="absolute sm:top-0 top-[70vh] left-0 w-full" 
+        style={{ y: smBack}}
+      >
+        <Plant 
+          className="h-[140px] absolute right-0 sm:top-[30vh] top-[90vh]"
+          plantType={PlantType.HIGH_HANG} 
+          leftSide={false}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+        <Plant 
+          className="h-[160px] absolute right-0 sm:bottom-[17vh] bottom-[40vh]"
+          plantType={PlantType.LOW_HANG} 
+          leftSide={false}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+        <Plant 
+          className="h-[110px] absolute -left-2 sm:top-[40vh] top-[80vh]"
+          plantType={PlantType.MEDIUM_HANG} 
+          leftSide={true}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+        <Plant 
+          className="h-[100px] absolute -left-2 sm:bottom-[20vh] bottom-[60vh]"
+          plantType={PlantType.HIGH_HANG} 
+          leftSide={true}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+      </motion.div>
 
-      <Plant 
-        className="sm:block hidden h-[110px] absolute -left-2 sm:top-[40vh] top-[80vh]"
-        plantType={PlantType.MEDIUM_HANG} 
-        leftSide={true}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={smBack}
-      />
-      <Plant 
-        className="sm:block hidden h-[220px] absolute -left-2 sm:top-[8vh] top-[20vh]"
-        plantType={PlantType.HIGH_HANG} 
-        leftSide={true}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={mdBack}
-      />
-      <Plant 
-        className="sm:block hidden h-[210px] absolute -left-2 sm:bottom-[30vh] bottom-[80vh]"
-        plantType={PlantType.HIGH_HANG} 
-        leftSide={true}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={mdBack}
-      />
-      <Plant 
-        className="sm:block hidden h-[100px] absolute -left-2 sm:bottom-[20vh] bottom-[60vh]"
-        plantType={PlantType.HIGH_HANG} 
-        leftSide={true}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={smBack}
-      />
-      <Plant 
-        className="sm:block hidden h-[310px] absolute -left-2 sm:bottom-[50vh] bottom-[150vh]"
-        plantType={PlantType.LOW_HANG} 
-        leftSide={true}
-        stemStroke="white"
-        leafStroke="white"
-        leafFill="white"
-        parallaxWeight={lgBack}
-      />
+      <motion.div 
+        key="medium-plants" 
+        className="absolute sm:top-0 top-[90vh] left-0 w-full" 
+        style={{ y: mdBack}}
+      >
+        <Plant 
+          className="h-[190px] absolute right-0 sm:bottom-[30vh] bottom-[60vh]"
+          plantType={PlantType.HIGH_HANG} 
+          leftSide={false}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+        <Plant 
+          className="h-[220px] absolute right-0 sm:top-[5vh] top-[40vh]"
+          plantType={PlantType.LOW_HANG} 
+          leftSide={false}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+        <Plant 
+          className="h-[220px] absolute -left-2 sm:top-[8vh] top-[20vh]"
+          plantType={PlantType.HIGH_HANG} 
+          leftSide={true}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+        <Plant 
+          className="h-[210px] absolute -left-2 sm:bottom-[30vh] bottom-[80vh]"
+          plantType={PlantType.HIGH_HANG} 
+          leftSide={true}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+      </motion.div>
+      
+      <motion.div 
+        key="large-plants" 
+        className="absolute sm:top-0 top-[130vh] left-0 w-full" 
+        style={{ y: lgBack}}
+      >
+        <Plant 
+          className="h-[20vw] min-h-[200px] absolute right-0 sm:bottom-[55vh] bottom-[100vh]"
+          plantType={PlantType.MEDIUM_HANG} 
+          leftSide={false}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+        <Plant 
+          className="h-[22vw] min-h-[200px] absolute -left-2 sm:bottom-[50vh] bottom-[150vh]"
+          plantType={PlantType.LOW_HANG} 
+          leftSide={true}
+          stemStroke="white"
+          leafStroke="white"
+          leafFill="white"
+        />
+      </motion.div>
     </div>
   );
 };
