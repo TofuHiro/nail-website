@@ -22,7 +22,7 @@ const Contact = ({ ref }: Props) => {
       <TitleBlock bgImage={contact} bgFadeDelay={.2} parallax={titleParallax} title="CONTACT" titleFadeDelay={.2}/>
 
       <div className="relative md:px-[22vw] pt-[6vh] px-[6vw] pb-[4vh]">
-        <div className="sm:flex-row flex flex-col bg-white">
+        <div className="sm:flex-row flex flex-col">
           <motion.p 
             className="flex-1 sm:mr-6 mr-0 sm:my-8 my-4 text-primary text-justify"
             initial="hidden"

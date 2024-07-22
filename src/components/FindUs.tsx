@@ -3,7 +3,7 @@ import { fadeIn, fadeInRight } from "./animations";
 
 const FindUs = () => {
   return (
-    <div className="md:px-[6vw] sm:flex-row flex flex-col px-[6vw] py-[6vh] bg-white">
+    <div className="relative z-50 md:px-[6vw] sm:flex-row flex flex-col px-[6vw] py-[6vh] bg-white">
       <div className="flex-1 sm:mr-6 mr-0 py-[2vh]">
         <motion.h2 
           className="lg:text-5xl sm:text-4xl sm:text-end text-start text-3xl font-semibold text-header"
