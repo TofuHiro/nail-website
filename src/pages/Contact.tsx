@@ -22,7 +22,7 @@ const Contact = ({ ref }: Props) => {
     <>
       <TitleBlock bgImage={contact} bgFadeDelay={.2} titleParallax={titleParallax} bgParallax={bgParallax} title="CONTACT" titleFadeDelay={.2}/>
 
-      <div className="relative md:px-[22vw] pt-[6vh] px-[6vw] pb-[4vh] bg-white">
+      <div className="relative lg:px-[22vw] md:px-20 px-8 pt-[6vh] pb-[4vh] bg-white">
         <div className="sm:flex-row flex flex-col">
           <motion.p 
             className="flex-1 sm:mr-6 mr-0 sm:my-8 my-4 text-primary text-justify"
@@ -106,7 +106,9 @@ const Contact = ({ ref }: Props) => {
         </div>
 
         <Plant
-          className="md:block hidden xl:h-[300px] md:h-[200px] sm:h-[150px] absolute left-0 -bottom-36 drop-shadow-md"
+          className="sm:block hidden h-[350px] absolute -left-4 -bottom-44 drop-shadow-md"
+          width={340}
+          height={340}
           plantType={PlantType.HIGH_HANG} 
           leftSide={true}
           stemStroke="#a36f78"
@@ -115,7 +117,9 @@ const Contact = ({ ref }: Props) => {
           parallaxWeight={md}
         />
         <Plant
-          className="md:block hidden 2xl:h-[350px] xl:h-[300px] md:h-[250px] sm:h-[200px] absolute right-0 bottom-40 drop-shadow-md"
+          className="lg:block hidden h-[240px] absolute right-0 bottom-40 drop-shadow-md"
+          width={230}
+          height={230}
           plantType={PlantType.MEDIUM_HANG} 
           leftSide={false}
           stemStroke="#fcaebb"

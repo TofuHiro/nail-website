@@ -23,7 +23,7 @@ const AboutUs = ({ ref }: Props) => {
     <>
       <TitleBlock bgImage={about} bgFadeDelay={.2} titleParallax={titleParallax} bgParallax={bgParallax} title="ABOUT" titleFadeDelay={.2}/>
 
-      <div className="relative bg-white md:px-[22vw] pt-[6vh] px-[6vw] pb-[4vh]">
+      <div className="relative bg-white lg:px-[22vw] md:px-20 px-8 pt-[6vh]  pb-[4vh]">
         <motion.p className="text-primary text-justify"
           initial="hidden"
           whileInView="visible"
@@ -42,7 +42,9 @@ const AboutUs = ({ ref }: Props) => {
         </motion.p>
 
         <Plant 
-          className="md:block hidden xl:h-[300px] md:h-[200px] sm:h-[150px] absolute left-0 -bottom-28 drop-shadow-md"
+          className="lg:block hidden h-[250px] absolute left-0 -bottom-28 drop-shadow-md"
+          width={240}
+          height={240}
           plantType={PlantType.MEDIUM_HANG} 
           leftSide={true}
           stemStroke="#fcaebb"
@@ -52,7 +54,7 @@ const AboutUs = ({ ref }: Props) => {
         />
       </div>
 
-      <div className="relative md:px-[22vw] pt-[2vh] px-[6vw] pb-[4vh] sm:flex-row flex flex-col background-primary text-dim">
+      <div className="relative lg:px-[22vw] md:px-20 px-8 pt-[2vh] pb-[4vh] sm:flex-row flex flex-col background-primary text-dim">
         <motion.p className="lg:basis-2/3 flex-1 sm:mr-6 mr-0 sm:my-8 my-4 text-justify"
           initial="hidden"
           whileInView="visible"
@@ -70,6 +72,7 @@ const AboutUs = ({ ref }: Props) => {
         </motion.p>
         <div className="lg:basis-1/3 flex-1 sm:ml-6 ml-0 sm:my-8 my-4">
           <motion.img 
+            className="shadow-2xl"
             src={heart}
             alt="About us"
             initial="hidden"
@@ -81,7 +84,9 @@ const AboutUs = ({ ref }: Props) => {
         </div>
 
         <Plant 
-          className="md:block hidden 2xl:h-[350px] xl:h-[300px] md:h-[250px] sm:h-[200px] absolute right-0 -bottom-16 drop-shadow-md"
+          className="md:block hidden h-[250px] absolute -right-2 -bottom-20 drop-shadow-md"
+          width={240}
+          height={240}
           plantType={PlantType.HIGH_HANG} 
           leftSide={false}
           stemStroke="#a36f78"

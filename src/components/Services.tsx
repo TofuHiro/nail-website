@@ -93,6 +93,8 @@ const Services = ({ ref }: Props) => {
       >
         <Plant 
           className="h-[140px] absolute right-0 sm:top-[30vh] top-[90vh]"
+          width={100}
+          height={100}
           plantType={PlantType.HIGH_HANG} 
           leftSide={false}
           stemStroke="white"
@@ -101,6 +103,8 @@ const Services = ({ ref }: Props) => {
         />
         <Plant 
           className="h-[160px] absolute right-0 sm:bottom-[17vh] bottom-[40vh]"
+          width={100}
+          height={100}
           plantType={PlantType.LOW_HANG} 
           leftSide={false}
           stemStroke="white"
@@ -109,6 +113,8 @@ const Services = ({ ref }: Props) => {
         />
         <Plant 
           className="h-[110px] absolute -left-2 sm:top-[40vh] top-[80vh]"
+          width={100}
+          height={100}
           plantType={PlantType.MEDIUM_HANG} 
           leftSide={true}
           stemStroke="white"
@@ -117,6 +123,8 @@ const Services = ({ ref }: Props) => {
         />
         <Plant 
           className="h-[100px] absolute -left-2 sm:bottom-[20vh] bottom-[60vh]"
+          width={100}
+          height={100}
           plantType={PlantType.HIGH_HANG} 
           leftSide={true}
           stemStroke="white"
@@ -132,6 +140,8 @@ const Services = ({ ref }: Props) => {
       >
         <Plant 
           className="h-[190px] absolute right-0 sm:bottom-[30vh] bottom-[60vh]"
+          width={180}
+          height={180}
           plantType={PlantType.HIGH_HANG} 
           leftSide={false}
           stemStroke="white"
@@ -140,6 +150,8 @@ const Services = ({ ref }: Props) => {
         />
         <Plant 
           className="h-[220px] absolute right-0 sm:top-[5vh] top-[40vh]"
+          width={200}
+          height={200}
           plantType={PlantType.LOW_HANG} 
           leftSide={false}
           stemStroke="white"
@@ -148,6 +160,8 @@ const Services = ({ ref }: Props) => {
         />
         <Plant 
           className="h-[220px] absolute -left-2 sm:top-[8vh] top-[20vh]"
+          width={200}
+          height={200}
           plantType={PlantType.HIGH_HANG} 
           leftSide={true}
           stemStroke="white"
@@ -156,6 +170,8 @@ const Services = ({ ref }: Props) => {
         />
         <Plant 
           className="h-[210px] absolute -left-2 sm:bottom-[30vh] bottom-[80vh]"
+          width={200}
+          height={200}
           plantType={PlantType.HIGH_HANG} 
           leftSide={true}
           stemStroke="white"
@@ -170,7 +186,9 @@ const Services = ({ ref }: Props) => {
         style={{ y: lgBack}}
       >
         <Plant 
-          className="h-[20vw] min-h-[200px] absolute right-0 sm:bottom-[55vh] bottom-[100vh]"
+          className="h-[260px] absolute right-0 sm:bottom-[55vh] bottom-[100vh]"
+          width={250}
+          height={250}
           plantType={PlantType.MEDIUM_HANG} 
           leftSide={false}
           stemStroke="white"
@@ -178,7 +196,9 @@ const Services = ({ ref }: Props) => {
           leafFill="white"
         />
         <Plant 
-          className="h-[22vw] min-h-[200px] absolute -left-2 sm:bottom-[50vh] bottom-[150vh]"
+          className="h-[310px] absolute -left-2 sm:bottom-[50vh] bottom-[150vh]"
+          width={300}
+          height={300}
           plantType={PlantType.LOW_HANG} 
           leftSide={true}
           stemStroke="white"

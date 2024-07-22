@@ -37,7 +37,7 @@ const FindUs = () => {
         whileInView="visible"
         variants={fadeIn}
         viewport={{ once: true }}
-        custom={1.8}
+        custom={1.6}
       >
         <iframe
           className="flex-1 h-[40vh] max-w-[500px] hover:shadow-2xl duration-150"
