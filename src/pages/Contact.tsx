@@ -16,12 +16,13 @@ const Contact = ({ ref }: Props) => {
   });
   const md = useParallax(scrollYProgress, 450, -450);
   const titleParallax = useParallax(scrollYProgress, -350, 650);
+  const bgParallax = useParallax(scrollYProgress, 250, -250);
 
   return (
     <>
-      <TitleBlock bgImage={contact} bgFadeDelay={.2} parallax={titleParallax} title="CONTACT" titleFadeDelay={.2}/>
+      <TitleBlock bgImage={contact} bgFadeDelay={.2} titleParallax={titleParallax} bgParallax={bgParallax} title="CONTACT" titleFadeDelay={.2}/>
 
-      <div className="relative md:px-[22vw] pt-[6vh] px-[6vw] pb-[4vh]">
+      <div className="relative md:px-[22vw] pt-[6vh] px-[6vw] pb-[4vh] bg-white">
         <div className="sm:flex-row flex flex-col">
           <motion.p 
             className="flex-1 sm:mr-6 mr-0 sm:my-8 my-4 text-primary text-justify"

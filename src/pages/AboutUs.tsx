@@ -17,12 +17,13 @@ const AboutUs = ({ ref }: Props) => {
   });
   const md = useParallax(scrollYProgress, 450, -350);
   const titleParallax = useParallax(scrollYProgress, -350, 650);
+  const bgParallax = useParallax(scrollYProgress, 250, -250);
 
   return (
     <>
-      <TitleBlock bgImage={about} bgFadeDelay={.2} parallax={titleParallax} title="ABOUT" titleFadeDelay={.2}/>
+      <TitleBlock bgImage={about} bgFadeDelay={.2} titleParallax={titleParallax} bgParallax={bgParallax} title="ABOUT" titleFadeDelay={.2}/>
 
-      <div className="relative md:px-[22vw] pt-[6vh] px-[6vw] pb-[4vh]">
+      <div className="relative bg-white md:px-[22vw] pt-[6vh] px-[6vw] pb-[4vh]">
         <motion.p className="text-primary text-justify"
           initial="hidden"
           whileInView="visible"
@@ -75,7 +76,7 @@ const AboutUs = ({ ref }: Props) => {
             whileInView="visible"
             variants={fadeIn}
             viewport={{ once: true }}
-            custom={.5}
+            custom={.8}
             />
         </div>
 
