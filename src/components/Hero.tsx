@@ -58,7 +58,7 @@ const Hero = ({ ref }: Props) => {
           technicians
         </motion.h5>
         <motion.button
-          className="button-primary mb-6 drop-shadow-md"
+          className="relative z-10 button-primary mb-6 drop-shadow-md"
           onClick={() => window.scrollTo({ top: 700, behavior: "smooth" })}
           initial="hidden"
           whileInView="visible"
